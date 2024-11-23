@@ -6,7 +6,7 @@ This project aims to establish a robust Azure Security Operations Center (SOC) e
 
 Walkthroughs serve as hands-on learning project and build a solid foundation for cybersecurity professionals to gain practical experience in implementing and managing Azure security solutions.
 
-## Key Technologies and Features:
+## Key Technologies
 
 * Azure Security Center: Centralized security management and threat protection for Azure resources.
 * Azure Sentinel: Advanced threat detection and response platform for cloud workloads.
