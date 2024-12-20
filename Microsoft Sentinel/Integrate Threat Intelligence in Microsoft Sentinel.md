@@ -45,7 +45,7 @@ Retrieve the **API Root URL** and **API Key** from the account settings as shown
 ![7](https://github.com/user-attachments/assets/454650f9-c7b6-44d0-88c2-25a0f865baf7)
 
 
-## 4. Configure the Connector in Microsoft Sentinel
+### 4. Configure the Connector in Microsoft Sentinel
 
 Enter the details (API Root URL, Collection, and API Key) into the Threat Intelligence TAXII Connector configuration page in Sentinel.
 
@@ -62,7 +62,7 @@ You can now view and access **Threat Intelligence Indicators** under the Threat 
 ![10](https://github.com/user-attachments/assets/7a7ceddb-ef38-4571-884d-2a79001b76f2)
 
 
-## 5. Utilizing Threat Intelligence for Analytics and Detection
+### 5. Utilizing Threat Intelligence for Analytics and Detection
 
 To create an analytic rule with TI Feeds, we will develop a detection rule using **Threat Intelligence Indicators** and **Windows Security Event logs.**
 
