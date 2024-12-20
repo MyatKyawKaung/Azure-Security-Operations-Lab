@@ -8,10 +8,12 @@ Walkthroughs serve as hands-on learning project and build a solid foundation for
 
 ## Key Technologies
 
-* **Azure Security Center**: Centralized security management and threat protection for Azure resources.
 * **Azure Sentinel**: Advanced threat detection and response platform for cloud workloads.
 * **Azure Monitor**: Comprehensive monitoring and logging solution for Azure resources.
 * **Microsoft Defender for Endpoint**: Endpoint protection and threat detection for multiple Endpoints.
 * **Microsoft Defender for Cloud**: Endpoint protection and threat detection for Azure workloads.
 * **Microsoft Defender for Office365**: Protects against threats in email, links (URLS), file attachments.
 * **Microsoft EntraID**: Identity and access management solution.
+
+## Lab Digram Overview
+![Azure Security Operation Diagram drawio](https://github.com/user-attachments/assets/03ddb2ce-497a-4037-a483-f7b677b43b30)
