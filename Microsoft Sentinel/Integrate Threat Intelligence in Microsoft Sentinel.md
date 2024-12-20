@@ -1,4 +1,4 @@
-### What are STIX and TAXII?
+## What are STIX and TAXII?
 
 **STIX (Structured Threat Information Expression)** and **TAXII (Trusted Automated Exchange of Indicator Information)** are standards for sharing threat intelligence data.
 
