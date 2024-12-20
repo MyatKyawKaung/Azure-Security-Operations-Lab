@@ -86,7 +86,7 @@ You can see AMA agent is start forwarding logs to Log Analytics workspace.
 ![22](https://github.com/user-attachments/assets/b85b6a59-8e56-4939-a7ac-d19d37cef83c)
 
 
-# Step 5: Configuring Microsoft Sentinel
+## Step 5: Configuring Microsoft Sentinel
 
 Navigate to **Microsoft Sentinel** in the Azure portal and Click **Create.**
 
@@ -101,7 +101,7 @@ Once Microsoft Sentinel is enabled, you will get Sentinel free trial for 31days.
 
 ![25](https://github.com/user-attachments/assets/f3ab8768-bd97-43bc-b51d-2efd5fff3988)
 
-# Step 6: Configure Data Collection Rule
+## Step 6: Configure Data Collection Rule
 
 Search for **Windows Security Events** in the **Content Hub** and install the connector.
 
