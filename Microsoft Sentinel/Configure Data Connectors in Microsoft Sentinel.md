@@ -87,3 +87,5 @@ Check the subscription and connection status.
 Verify Defender for Cloud data connector status as connected.
 
 ![21](https://github.com/user-attachments/assets/04a13eec-8a18-4aa9-8663-abad9398ca37)
+
+**By configuring these data connectors, Microsoft Sentinel is equipped to ingest crucial logs and security events from Azure resources, enhancing visibility and enabling advanced threat detection.**
