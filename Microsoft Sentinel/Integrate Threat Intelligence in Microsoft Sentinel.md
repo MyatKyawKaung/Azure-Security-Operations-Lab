@@ -96,3 +96,39 @@ Set a schedule for analytic rule to run (e.g., every 12 hours for the last 12 ho
 Once everything is validated, save the rule to enable detection as shown below.
 
 ![17](https://github.com/user-attachments/assets/49e57aa6-cb92-4fb6-9b6b-e4d105f68f68)
+
+## 6. Create custom Threat Intelligence Indicators
+
+As a Security Analyst, creating custom Threat Intelligence (TI) indicators is an essential part of incident management. To create your own TI indicators in Microsoft Sentinel;
+
+1. **Navigate to the Threat Intelligence Blade**:
+    - Open Microsoft Sentinel and go to the **Threat Intelligence** blade.
+    - Click **Add new** to create a new indicator.
+2. Choose the indicator type from the dropdown menu, such as domain-name, file, ipv4,ipv6, url.
+
+![18](https://github.com/user-attachments/assets/18f02878-967a-49a0-b97f-161d96c8319f)
+
+
+3. **Add Metadata (Tags)**:
+- Use the **Tags** field to add relevant metadata about the (IOC).
+- Example: Tagging the IOC with **Incident 1234** helps other analysts understand its context.
+
+4. **Define Threat Types :** 
+
+Specify the threat type associated with the IOC, such as (C2) Domain, Malicious Activity, etc.
+
+5. **Add Description and Confidence Level**:
+- Provide a detailed description of the IOC.
+- Set a **Confidence Level** to indicate the reliability of the indicator (e.g., 80% confidence).
+
+6. **Specify the Kill Chain Phase**:
+- Use the **Kill Chain** field to identify the attack stage (e.g., Reconnaissance, Exploitation, Exfiltration).
+- This helps analysts trace and combat Advanced Persistent Threats (APTs)
+
+7. Define the **Valid Until** date to indicate how long the IOC is relevant for monitoring.
+
+![19](https://github.com/user-attachments/assets/5b454cc8-3f89-4a86-a2d1-8425044d841d)
+
+Once all fields are filled out, click **Apply.** The newly created IOC will now appear in the **Threat Intelligence** menu for further use.
+
+![20](https://github.com/user-attachments/assets/c503124f-557c-48ba-b704-c2db9fc541d5)
