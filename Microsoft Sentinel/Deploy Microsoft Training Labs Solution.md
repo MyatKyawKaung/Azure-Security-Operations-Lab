@@ -1,6 +1,6 @@
 The **Microsoft Sentinel Training Lab Solution** provides a hands-on environment by ingesting pre-recorded data, artifacts, custom tables that enable you to practice incident detection, investigation, and response within Sentinel.
 
-## Install Microsoft Sentinel Training Lab Solution
+## 1. Install Microsoft Sentinel Training Lab Solution
 
 In the **Azure Portal**, search for **Microsoft Sentinel Training Lab Solution**.
 
@@ -27,7 +27,7 @@ The deployment process takes approximately **10 to 15 minutes**.
 ![8](https://github.com/user-attachments/assets/39fb94f9-ea05-4f4c-86c7-d532487ba324)
 
 
-## Authorize API Connection for Sentinel
+## 2. Authorize API Connection for Sentinel
 
 The **API connection** must be enabled because the **Microsoft Sentinel Training Lab Solution** uses workflows and playbooks that depend on external integrations for automated actions, including:
 
