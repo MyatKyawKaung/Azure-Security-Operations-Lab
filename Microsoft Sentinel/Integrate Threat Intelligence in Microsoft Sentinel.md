@@ -97,7 +97,7 @@ Once everything is validated, save the rule to enable detection as shown below.
 
 ![17](https://github.com/user-attachments/assets/49e57aa6-cb92-4fb6-9b6b-e4d105f68f68)
 
-## 6. Create custom Threat Intelligence Indicators
+### 6. Create custom Threat Intelligence Indicators
 
 As a Security Analyst, creating custom Threat Intelligence (TI) indicators is an essential part of incident management. To create your own TI indicators in Microsoft Sentinel;
 
