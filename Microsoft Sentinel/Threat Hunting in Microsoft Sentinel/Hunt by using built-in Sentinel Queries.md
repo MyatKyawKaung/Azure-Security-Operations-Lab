@@ -2,19 +2,19 @@
 
 Search for **Microsoft Sentinel** in the Azure portal and navigate to your Log Analytics workspace.
 
-![image.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/d239852d-d5dc-4012-b712-e7224000b311/391cbafb-8933-423b-9537-f01849e2c3c8/image.png)
+![1](https://github.com/user-attachments/assets/bdc3b0c5-4429-4c4a-ae52-220e97733965)
 
 In Microsoft Sentinel, under the **Threat Management** blade, select **Hunting**. This displays all available hunting queries under the **Queries** tab.
 
-![image.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/d239852d-d5dc-4012-b712-e7224000b311/bb426b65-72cf-4aed-a1bd-1e69f830e40d/image.png)
+![2](https://github.com/user-attachments/assets/ad59d02e-2fbe-47b4-8f4f-923348f39c3c)
 
 The statistics display the number of active queries and required data sources in your environment. You can also see metrics for queries run in your current session, including livestream results and bookmarks created during hunting.
 
-![image.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/d239852d-d5dc-4012-b712-e7224000b311/0bc1a568-8e80-4406-b257-8e22ecc12feb/image.png)
+![3](https://github.com/user-attachments/assets/841d8637-8fa7-40ca-a6ad-2a1c0bbe331a)
 
 The action bar at the top allows you to set the hunting timeline, create custom hunting queries, run selected queries, and delete queries.
 
-![image.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/d239852d-d5dc-4012-b712-e7224000b311/0cf1ef52-6fca-45df-ae6d-a54b20c160b9/image.png)
+![4](https://github.com/user-attachments/assets/f6a2a497-bdcd-4796-a406-6752ffc16cde)
 
 ### Exercise: Hypothesis to run hunting queries
 
@@ -55,46 +55,47 @@ Use Microsoft Sentinel’s built-in hunting queries, such as:
 
 Search for the keyword **PowerShell** in the search bar and select the desired queries and click **Run Selected Queries**.
 
-![image.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/d239852d-d5dc-4012-b712-e7224000b311/fa2fb05e-6456-4c5c-a582-dc2e7283f9db/image.png)
+![5](https://github.com/user-attachments/assets/e33051e8-5928-44fe-b283-bcf68ac70380)
 
 Once the queries execute, their status updated to running state.
 
-![image.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/d239852d-d5dc-4012-b712-e7224000b311/8b3ab40c-3b1c-4935-a962-bc1c025f088b/image.png)
+![6](https://github.com/user-attachments/assets/47eff468-5aec-4522-a32f-74b4a9a7be85)
 
 Results are displayed under the **Results** column. (Note: In my lab environment, no malicious activity may be detected due to inactivity.)
 
-![image.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/d239852d-d5dc-4012-b712-e7224000b311/ef6d64b6-f1c1-4ab3-8143-9a16e4fde89d/image.png)
+![7](https://github.com/user-attachments/assets/dc810596-119a-4544-aedf-b907167d0ab7)
 
 ### MITRE ATT&CK Mapping
 
 From our hypothesis, it relates to the **MITRE ATT&CK technique T1059: Command and Scripting Interpreter**
 
-![image.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/d239852d-d5dc-4012-b712-e7224000b311/8b2083dc-6a9b-445e-ba37-19b5258e297c/image.png)
+![8](https://github.com/user-attachments/assets/6326ee73-1cdd-4c6a-9b91-338c8b731483)
 
 You can add filter hunting queries by **MITRE tactics and techniques.**
 
-![image.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/d239852d-d5dc-4012-b712-e7224000b311/f447a1cc-3e74-454a-8809-7c02561ab371/image.png)
-
-![image.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/d239852d-d5dc-4012-b712-e7224000b311/e4782a19-7f3c-45cf-ad48-34c30ddad7b2/image.png)
+![9](https://github.com/user-attachments/assets/275507cb-4c13-4414-821e-fcec2f09512e)
+![10](https://github.com/user-attachments/assets/e560d065-f68a-4d92-b49c-cec612e9b0f9)
 
 It will show all the hunting queries associated with the TTPs.
 
-![image.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/d239852d-d5dc-4012-b712-e7224000b311/2c242075-4eeb-4fa7-80de-6fc58ec53c1a/image.png)
+![11](https://github.com/user-attachments/assets/a26c55fe-36e0-46de-afa7-411e214787bd)
 
-### Additional Features
+### Additional Hunting Features
 
 You can also add hunting query to livestream, create analytic rule, create a hunt or add to favourites.
 
-![image.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/d239852d-d5dc-4012-b712-e7224000b311/edc382b9-4a64-4399-96a6-410e0ef2e12b/image.png)
+![12](https://github.com/user-attachments/assets/8fe35624-4649-427c-a1cd-5a3e0712b212)
 
 Once you added hunting queries into livestream, any new results on that Livestream instance will create a notification within the Azure user interface.
 
-![image.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/d239852d-d5dc-4012-b712-e7224000b311/8ddb9118-ef1b-4e5c-885a-9e694207d8a3/image.png)
+![13](https://github.com/user-attachments/assets/0b68d5fc-c2ce-4185-a44a-71da5f58a3d9)
 
 You can add **bookmarks** on hunting query results. This can enable analysts to save, tag, annotate, share and investigate results from a Log Analytics query.
 
-![image.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/d239852d-d5dc-4012-b712-e7224000b311/715e42f8-56aa-4b4c-a02e-0f6c70eb9c90/image.png)
+![14](https://github.com/user-attachments/assets/4c7c3686-7085-49f7-aaf7-b1d3387a4676)
 
 You can also add the bookmarks to create or add to existing incidents as well.
 
-![image.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/d239852d-d5dc-4012-b712-e7224000b311/23bac4a9-b0ca-4ab7-866a-da255c833f81/image.png)
+![15](https://github.com/user-attachments/assets/67c7c9be-e6ab-41ab-91ca-83cdc81161e6)
+
+
