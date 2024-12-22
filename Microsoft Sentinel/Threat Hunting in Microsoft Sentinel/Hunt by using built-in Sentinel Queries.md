@@ -1,0 +1,100 @@
+### This lab will walkthrough how to perform a proactive threat-hunting procedure using Microsoft Sentinel’s hunting features.
+
+Search for **Microsoft Sentinel** in the Azure portal and navigate to your Log Analytics workspace.
+
+![image.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/d239852d-d5dc-4012-b712-e7224000b311/391cbafb-8933-423b-9537-f01849e2c3c8/image.png)
+
+In Microsoft Sentinel, under the **Threat Management** blade, select **Hunting**. This displays all available hunting queries under the **Queries** tab.
+
+![image.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/d239852d-d5dc-4012-b712-e7224000b311/bb426b65-72cf-4aed-a1bd-1e69f830e40d/image.png)
+
+The statistics display the number of active queries and required data sources in your environment. You can also see metrics for queries run in your current session, including livestream results and bookmarks created during hunting.
+
+![image.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/d239852d-d5dc-4012-b712-e7224000b311/0bc1a568-8e80-4406-b257-8e22ecc12feb/image.png)
+
+The action bar at the top allows you to set the hunting timeline, create custom hunting queries, run selected queries, and delete queries.
+
+![image.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/d239852d-d5dc-4012-b712-e7224000b311/0cf1ef52-6fca-45df-ae6d-a54b20c160b9/image.png)
+
+### Exercise: Hypothesis to run hunting queries
+
+“There might be potentially malicious PowerShell scripts being executed within our environment that are not being detected by our existing security solutions.
+
+**Why Focus on PowerShell?**
+
+PowerShell is often exploited for malicious purposes, including:
+
+- Downloading malware.
+- Establishing persistence.
+- Data exfiltration.
+
+This aligns with the **Living off the Land (LotL)** technique used by attackers.
+
+### Queries to Test the Hypothesis
+
+Use Microsoft Sentinel’s built-in hunting queries, such as:
+
+1. **Exchange PowerShell Snapin Added**:
+    
+    Detects the loading of the Exchange PowerShell Snapin, often used by attackers on compromised servers.
+    
+2. **Invoke-PowerShellTcpOneLine Usage**:
+    
+    Identifies attempts to create reverse shells using this script.
+    
+3. **New PowerShell Scripts Encoded on the Command Line**:
+    
+    Detects encoded PowerShell commands, commonly used to obfuscate malicious activity.
+    
+4. **PowerShell Downloads**:
+    
+    Tracks PowerShell scripts downloading external files, a possible malware indicator.
+    
+
+### Execute Hunting Queries
+
+Search for the keyword **PowerShell** in the search bar and select the desired queries and click **Run Selected Queries**.
+
+![image.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/d239852d-d5dc-4012-b712-e7224000b311/fa2fb05e-6456-4c5c-a582-dc2e7283f9db/image.png)
+
+Once the queries execute, their status updated to running state.
+
+![image.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/d239852d-d5dc-4012-b712-e7224000b311/8b3ab40c-3b1c-4935-a962-bc1c025f088b/image.png)
+
+Results are displayed under the **Results** column. (Note: In my lab environment, no malicious activity may be detected due to inactivity.)
+
+![image.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/d239852d-d5dc-4012-b712-e7224000b311/ef6d64b6-f1c1-4ab3-8143-9a16e4fde89d/image.png)
+
+### MITRE ATT&CK Mapping
+
+From our hypothesis, it relates to the **MITRE ATT&CK technique T1059: Command and Scripting Interpreter**
+
+![image.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/d239852d-d5dc-4012-b712-e7224000b311/8b2083dc-6a9b-445e-ba37-19b5258e297c/image.png)
+
+You can add filter hunting queries by **MITRE tactics and techniques.**
+
+![image.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/d239852d-d5dc-4012-b712-e7224000b311/f447a1cc-3e74-454a-8809-7c02561ab371/image.png)
+
+![image.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/d239852d-d5dc-4012-b712-e7224000b311/e4782a19-7f3c-45cf-ad48-34c30ddad7b2/image.png)
+
+It will show all the hunting queries associated with the TTPs.
+
+![image.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/d239852d-d5dc-4012-b712-e7224000b311/2c242075-4eeb-4fa7-80de-6fc58ec53c1a/image.png)
+
+### Additional Features
+
+You can also add hunting query to livestream, create analytic rule, create a hunt or add to favourites.
+
+![image.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/d239852d-d5dc-4012-b712-e7224000b311/edc382b9-4a64-4399-96a6-410e0ef2e12b/image.png)
+
+Once you added hunting queries into livestream, any new results on that Livestream instance will create a notification within the Azure user interface.
+
+![image.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/d239852d-d5dc-4012-b712-e7224000b311/8ddb9118-ef1b-4e5c-885a-9e694207d8a3/image.png)
+
+You can add **bookmarks** on hunting query results. This can enable analysts to save, tag, annotate, share and investigate results from a Log Analytics query.
+
+![image.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/d239852d-d5dc-4012-b712-e7224000b311/715e42f8-56aa-4b4c-a02e-0f6c70eb9c90/image.png)
+
+You can also add the bookmarks to create or add to existing incidents as well.
+
+![image.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/d239852d-d5dc-4012-b712-e7224000b311/23bac4a9-b0ca-4ab7-866a-da255c833f81/image.png)
